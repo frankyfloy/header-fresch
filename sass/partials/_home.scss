@@ -1,0 +1,86 @@
+.home{
+    #my-carousel{
+        position: relative;
+        width: 100%;
+        box-shadow: 0px 0px 20px 2px #151111;
+
+        .carousel-inner{
+            .carousel-item{
+                position: relative;
+                background-color: rgba(0, 0, 0, 0.3);
+
+                img{
+                    object-fit: cover;
+                    height: 70vh;
+                    width: 100%;
+                }
+
+                a.link-img{
+                    position: absolute;
+                    right:10px;
+                    bottom: 10px;
+                }
+            }
+        }
+
+        .my-form-home{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            .jumbo-form{
+
+                display: flex;
+                flex-direction: column;
+
+                .header-jumbo{
+                    display: flex;
+                    flex-direction:column;
+                    justify-content: flex-start;
+                    margin-bottom: 20px;
+
+                    color: $white;
+                }
+
+                .search-bar{
+                    padding: 10px 30px;
+                    border-radius: 50px;
+
+                    border: 1px solid #000000;
+                    background-color: rgb(0 0 0 / 70%);
+                    box-shadow: 0px 2px 10px -4px #ffffff;
+                    color: white;
+
+                    .form-group{
+                        margin-bottom:0;
+                        .form-control{
+                            // @include py(10px);
+                            height: 50px;
+                            background-color: rgb(0 0 0 / 44%);
+
+                            &::placeholder{
+                                @include py(10px);
+
+                                padding-left: 10px;
+                                color:  $white;
+                                box-shadow: 0px 0px 4px 1px #bebababd;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    button{
+                        @include px(70px);
+                        @include py(5px);
+                        @include my(5px);
+                        border: 1px solid $white;
+                        color: $white;
+                    }
+                }
+            }
+
+        }
+    }
+}
